@@ -7,17 +7,17 @@
     <title>Document</title>
 </head>
 <body>
-    <?php
+   <?php
     $n = 30;
-    $data = array();
-
+ 
+    echo "Original: ";
     for ($i = 0; $i < $n; $i++) {
         $data[$i] = rand(10, 100);
+        echo "$data[$i] ";
     }
 
-    echo "Original: ";
-    print_r($data );
-    echo"<br>\n";
+    echo"<br>";
+    echo "Sorted: ";
 
 
     for($x = 0; $x < $n; $x++){
@@ -28,9 +28,12 @@
                 $data[$y] = $tmp;
             }
         }
+        
     }
-    echo "Sorted: ";
-    print_r($data);
-    ?>
+    for($o = 0; $o < $n; $o++){
+    	echo "$data[$o] ";
+    }
+   
+?>
 </body>
 </html>
